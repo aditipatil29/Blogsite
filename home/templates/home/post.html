@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Post</title>
+</head>
+
+<body>
+    <h1>Blogsite|Post</h1>
+    <div>
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">Blog</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+
+
+
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+
+                    <li class="navbar-item">
+                        <a class="nav-link" href="{% url 'home:loginuser'%}">Logout</a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'home:overview'%}">Overview</a>
+                    </li>
+
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'home:posts'%}">Posts</a>
+                    </li>
+
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'home:insights'%}">Insights</a>
+                    </li>
+
+                    <li class="navbar-item">
+                        <a class="nav-link" href="{% url 'home:contactus'%}">Contact Us</a>
+                    </li>
+
+                    <li class="navbar-item" style="float:right">
+                        <a class="nav-link" href="{% url 'home:home_view'%}">Logout</a>
+                    </li>
+
+                    <!-- <li style="float:right"><a class="active" href="#logout">LOGOUT</a></li> -->
+
+        </nav>
+        <br><br>
+
+
+        <div style="margin:0 auto;width:50%;text-align:left">
+            <form method="POST" action="/post/">
+                {%csrf_token%}
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Title</label>
+                            <input type="title" class="form-control" id="exampleInputPassword1" placeholder="title" name="title">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Content</label>
+                            <input type="content" class="form-control" id="exampleInputPassword1" placeholder="content" name="content">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <br>
+            </form>
+            </div>
+            </div>
+        </div>
+
+        <br><br><br>
+        <div class="alert alert-primary" role="alert">
+            Write Down Your Thoughts! For Example:
+        </div>
+        <div class="row">
+            <span>
+<div class="col-md-3">
+  <div class="card" style="width: 18rem;">
+    <img src="../../static/home/images/example1.png" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h1 class="card-title">Travel Blog</h1>
+      <p class="card-text"><ul><li>Is it safe to visit Bangkok<li>The 9 best neighbourhoods to stay in Rome<li>The 7 best tour companies in Iceland</ul></p>
+      
+
+    </div>
+  </div>
+</div>
+</span>
+            <span>
+<div class="col-md-3">
+  <div class="card" style="width: 18rem;">
+    <img src="../../static/home/images/example2.png" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h1 class="card-title">Food Blog</h1>
+      <p class="card-text"><ul><li>A Cooking Tour.<li>A Food Favorite.<li>A State Of Flavors.<li>A Taste Wish.</ul></p>
+    </div>
+  </div>
+</div>
+</span>
+            <span>
+<div class="col-md-3">
+  <div class="card" style="width: 18rem;">
+    <img src="../../static/home/images/example3.png" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h1 class="card-title">Mental Health Blog</h1>
+      <p class="card-text"><ul><li>The secret life of a manic depressive<li>Time to change<li>Depression blogs</ul></p>
+      </div>
+  </div>
+</div>
+</span>
+        </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+
+</html>
